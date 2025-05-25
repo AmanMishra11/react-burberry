@@ -1,0 +1,39 @@
+.cardContainer {
+  background-color: #1f1f1f;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.imageContainer {
+  position: relative;
+  aspect-ratio: 1;
+}
+
+.productImage {
+  object-fit: cover;
+  transition: opacity 0.3s;
+}
+
+.cardContent {
+  padding: 1rem;
+}
+
+.productName {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #f3f4f6;
+  margin-bottom: 0.5rem;
+}
+
+.productPrice {
+  color: #9ca3af;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.buyButton {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}

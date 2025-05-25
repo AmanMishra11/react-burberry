@@ -1,0 +1,32 @@
+.cartButton {
+  padding: 0.5rem;
+  border-radius: 9999px;
+  background-color: #1a1a1a;
+  transition: background-color 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.cartButton:hover {
+  background-color: #202020;
+}
+
+@keyframes click {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+}
+
+.cartButton.clicked {
+  animation: click 0.3s ease-in-out;
+}
+
+.cartIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #f3f4f6;
+}

@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Fira+Sans:ital,wght@0,900;1,900&family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
+.bannerContainer {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.imageContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 1s;
+}
+
+.imageContainer.visible {
+  opacity: 1;
+}
+
+.imageContainer.hidden {
+  opacity: 0;
+}
+
+.bannerImage {
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.title {
+  /* font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: #f3f4f6 !important;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  font-family: 'Lilita One', sans-serif;
+  letter-spacing: -0.025em; */
+  font-family: 'Fascinate', sans-serif; /* More dramatic font */
+  font-size: 10rem; /* Extra large */
+  font-weight: 1100; /* Maximum thickness */
+  letter-spacing: 1.5rem; /* Wide spacing */
+  color: #fff;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-transform: uppercase; /* ALL CAPS */
+  text-shadow: 3px 3px 0 #d30000, /* Red shadow for depth */
+               6px 6px 0 #58585c; /* Blue shadow for streetwear vibe */
+  line-height: 1;
+}
+
+.subtitle {
+  font-size: 3rem;
+  color: #d1d5db !important;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 3px 3px 0 #d30000, /* Red shadow for depth */
+               6px 6px 0 #58585c;
+  font-family: 'Noto Sans JP', sans-serif; 
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (min-width: 640px) {
+  .title {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 3.75rem;
+  }
+}
+
+
