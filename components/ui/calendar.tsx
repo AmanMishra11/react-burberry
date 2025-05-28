@@ -1,13 +1,38 @@
 "use client"
 
 import * as React from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+//import { ChevronLeft, ChevronRight } from "lucide-react"
 import { DayPicker } from "react-day-picker"
-
+import "react-day-picker/dist/style.css"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 
-export type CalendarProps = React.ComponentProps<typeof DayPicker>
+export type CalendarProps = React.ComponentProps<typeof DayPicker> & {
+  className?: string
+  classNames?: {
+    months?: string
+    month?: string
+    caption?: string
+    caption_label?: string
+    nav?: string
+    nav_button?: string
+    nav_button_previous?: string
+    nav_button_next?: string
+    table?: string
+    head_row?: string
+    head_cell?: string
+    row?: string
+    cell?: string
+    day?: string
+    day_range_end?: string
+    day_selected?: string
+    day_today?: string
+    day_outside?: string
+    day_disabled?: string
+    day_range_middle?: string
+    day_hidden?: string
+  }
+}
 
 function Calendar({
   className,
@@ -46,17 +71,14 @@ function Calendar({
           "bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground",
         day_today: "bg-accent text-accent-foreground",
         day_outside:
-          "day-outside text-muted-foreground aria-selected:bg-accent/50 aria-selected:text-muted-foreground",
+          "day-outside text-muted-foreground opacity-50 aria-selected:bg-accent/50 aria-selected:text-muted-foreground",
         day_disabled: "text-muted-foreground opacity-50",
         day_range_middle:
           "aria-selected:bg-accent aria-selected:text-accent-foreground",
         day_hidden: "invisible",
         ...classNames,
       }}
-      components={{
-        IconLeft: ({ ...props }) => <ChevronLeft className="h-4 w-4" />,
-        IconRight: ({ ...props }) => <ChevronRight className="h-4 w-4" />,
-      }}
+      // Removed unsupported components prop (IconLeft, IconRight)
       {...props}
     />
   )

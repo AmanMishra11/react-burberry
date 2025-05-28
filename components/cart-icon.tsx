@@ -13,7 +13,12 @@ export function CartIcon() {
   }
 
   return (
-    <button onClick={handleClick} className={`${styles.cartButton} ${isClicked ? styles.clicked : ""}`}>
+    <button
+      onClick={handleClick}
+      className={`${styles.cartButton} ${isClicked ? styles.clicked : ""}`}
+      title="View cart"
+      aria-label="View cart"
+    >
       <ShoppingCart className={styles.cartIcon} />
     </button>
   )

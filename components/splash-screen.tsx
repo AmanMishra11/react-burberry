@@ -11,7 +11,7 @@ export function SplashScreen() {
 
   useEffect(() => {
     const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$#@%"
-    let interval: NodeJS.Timeout
+    //let interval: ReturnType<typeof setInterval>
 
     // Matrix text effect
     const matrixInterval = setInterval(() => {
@@ -23,7 +23,7 @@ export function SplashScreen() {
     }, 50)
 
     // Progress bar animation
-    interval = setInterval(() => {
+    const interval = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {
           clearInterval(interval)
